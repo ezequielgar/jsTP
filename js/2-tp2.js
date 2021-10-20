@@ -10,12 +10,40 @@
 // Si ingreso un numero que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si el numero ingresado no es válido mostrar el mensaje “Introduce un número válido”.
 
 let nota;
-
-do{
-    nota = parseInt(prompt("Ingrese una calificaicon del 0 al 10"));
-    console.log(nota);
-    //verificar si la nota es un numero y ademas  esta entre 0 y 10
-    if (!isNaN(nota) && nota > 0 && nota <= 10){
-        
-    }    
-}
+do {
+  nota = parseInt(prompt("Ingresa una nota del 0 al 10"));
+  console.log(nota);
+   //verificar si la nota es un numero y ademas  esta entre 0 y 10
+   if(!isNaN(nota) && nota > 0 && nota <= 10){
+       switch(nota){
+           
+           case 1:
+           case 2:
+               alert('Muy Deficiente');
+               break;
+            case 3:
+            case 4:
+                alert('Insuficiente');
+                break;
+            case 5:
+            case 6:
+                alert('Suficiente');
+                break;
+            case 7:
+                alert('Bien');
+                break;
+            case 8:
+            case 9:
+                alert('Notable');
+                break;
+            case 10:
+                alert('Sobresaliente');
+            default:
+                alert('Nota erronea');
+            break;
+       }
+   }else{
+    alert('Nota erronea');
+   }
+   //si no pulse cancelar el bucle se vuelve a repetir
+} while (confirm("¿Desea continuar?"));
