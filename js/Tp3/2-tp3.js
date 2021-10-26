@@ -7,4 +7,21 @@
 // Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
 
 
+let cadena = [] ;
+do{
 
+    let ciudad = prompt('Ingrese una ciudad');
+    
+    if(ciudad != 0)
+    
+    if(cadena == ''){
+        cadena = cadena + ciudad ;
+            }
+    else {
+        cadena = cadena + '-' + ciudad ;
+    }
+
+}
+while (confirm('¿Desea continuar?'));
+
+document.write(cadena);
