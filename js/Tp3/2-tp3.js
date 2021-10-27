@@ -32,17 +32,17 @@ cadena = [];
 ciudad = 0;
 do {
     ciudad = prompt('Ingrese una ciudad');
-    console.log(ciudad);
-    if (cadena == '') {
-        cadena = cadena + ciudad ;
-        console.log(ciudad);
-        
-    } else {
-        cadena = cadena + '<br>' + ciudad ;
-    }
-   
+    if( ciudad == '' || ciudad == 0){
+        alert('se finaliza programa');
 
-} while (ciudad != 0 &&  confirm('Desea continuar?'));
+    }else{
+
+        console.log(ciudad);
+        cadena.push(ciudad);
+    }
+  
+} while (ciudad != 0 && confirm('Desea continuar?'));
 document.write(cadena);
-document.write('<br> La longitud del arreglo es de ' + cadena.length);
+// Mostrar la longitud del arreglo.
+document.write('<br><b>La longitud del arreglo es de : </b>' + cadena.length);
 
