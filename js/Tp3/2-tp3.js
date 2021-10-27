@@ -8,39 +8,41 @@
 // Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
 
 
-cadena = [] ;
+// cadena = [] ;
+// ciudad = 0;
+// ciudad = prompt('Ingrese una ciudad (ingrese 0 para cancelar):');
+// while (ciudad != 0 && confirm('Desea continuar?'))
+
+
+// {
+//     cadena.push(ciudad);
+//     cadena.length;
+//     cadena[0];
+//     if (cadena.lenght >= 3){
+//         cadena[3];
+//     }
+//     cadena[cadena.lenght - 1];
+
+//     cadena[cadena.lenght - 1] = "París";
+
+// }
+// document.write(cadena);
+
+cadena = [];
 ciudad = 0;
-ciudad = prompt('Ingrese una ciudad (ingrese 0 para cancelar):');
-// &&
-// V && V => V
-// F && V => F
-// V && F => F
-// F && F => F
-while (ciudad != 0 && confirm('Desea continuar?'))
-{
-    cadena.push(ciudad);
-    cadena.length;
-    // Mostrar en el documento web los ítems de las posiciones primera, tercera y última.
-    //  0         1      2    3      4      5 
-    // ["a", "ada", "sdasd", "as", "d", "elem"]
-    cadena[0];
-    if (cadena.lenght >= 3){
-        cadena[3];
+do {
+    ciudad = prompt('Ingrese una ciudad');
+    console.log(ciudad);
+    if (cadena == '') {
+        cadena = cadena + ciudad ;
+        console.log(ciudad);
+        
+    } else {
+        cadena = cadena + '<br>' + ciudad ;
     }
-    cadena[cadena.lenght - 1];
+   
 
-    cadena[cadena.lenght - 1] = "París";
-
-
-    // if(cadena == ''){
-    //     cadena = cadena + ciudad ;
-    // }
-    // else {
-    //     cadena = cadena + '-' + ciudad ;
-    // "aadsñlkdañlsdk"
-
-    // }
-    
-    ciudad = prompt('Ingrese una ciudad (ingrese 0 para cancelar):');
-}
+} while (ciudad != 0 &&  confirm('Desea continuar?'));
 document.write(cadena);
+document.write('<br> La longitud del arreglo es de ' + cadena.length);
+
