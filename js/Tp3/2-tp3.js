@@ -45,4 +45,6 @@ do {
 document.write(cadena);
 // Mostrar la longitud del arreglo.
 document.write('<br><b>La longitud del arreglo es de : </b>' + cadena.length);
+// Mostrar en el documento web los ítems de las posiciones primera, tercera y última.
+
 
