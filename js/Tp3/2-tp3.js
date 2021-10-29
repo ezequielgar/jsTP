@@ -7,27 +7,6 @@
 // Escribe por pantalla el elemento que ocupa la segunda posición.
 // Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
 
-
-// cadena = [] ;
-// ciudad = 0;
-// ciudad = prompt('Ingrese una ciudad (ingrese 0 para cancelar):');
-// while (ciudad != 0 && confirm('Desea continuar?'))
-
-
-// {
-//     cadena.push(ciudad);
-//     cadena.length;
-//     cadena[0];
-//     if (cadena.lenght >= 3){
-//         cadena[3];
-//     }
-//     cadena[cadena.lenght - 1];
-
-//     cadena[cadena.lenght - 1] = "París";
-
-// }
-// document.write(cadena);
-
 cadena = [];
 ciudad = 0;
 do {
@@ -46,5 +25,20 @@ document.write(cadena);
 // Mostrar la longitud del arreglo.
 document.write('<br><b>La longitud del arreglo es de : </b>' + cadena.length);
 // Mostrar en el documento web los ítems de las posiciones primera, tercera y última.
+document.write('<br><b>Primera ciudad: </b>' + cadena[0]);
+document.write('<br><b>Tercera ciudad: </b>' + cadena[2]);
+document.write('<br><b>Ultima ciudad: </b>' + cadena[cadena.length -1]);
+// Añade en última posición la ciudad de París.
+cadena.push('Paris');
+document.write('<br><b>Ultima ciudad nueva: </b>' + cadena[cadena.length -1]);
+// Escribe por pantalla el elemento que ocupa la segunda posición.
+document.write('<br><b>Segunda ciudad: </b>' + cadena[1]);
+console.log('<br><b>Segunda ciudad: </b>' + cadena[1]);
+// Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
+cadena.splice(1,0,'Barcelona');
+document.write('<br><b>Segunda ciudad: </b>' + cadena[1]);
+console.log('<br><b>Segunda ciudad: </b>' + cadena[1]);
+document.write('<br><b>Nuevo array : </b>' + cadena);
+
 
 
