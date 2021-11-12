@@ -64,59 +64,74 @@
 // };
 // cuenta.informar();
 
-class cuenta  {
-  constructor( ){
-    this.titular = 'Alex';
-    this.saldo = 0;
-  }
-  ingresar(dineroIN){
-    let ingreso = dineroIN = parseInt(prompt('Coloque el monto a ingresar '));
-    return ingreso;
-  }
-  extraer(dineroOUT){
-    let retiro = dineroOUT =  parseInt(!isNaN(prompt('Coloque el monto a retirar')));
-    return retiro;
-  }
-  informar(){
-    document.write('Saldo actual de la cuenta: ' + this.saldo)
+class Cuentas  {
+  constructor(nombre, saldoInicial){
+    this.titular = nombre;
+    this.saldo = saldoInicial;
   }
 
-  get mostrarSaldo(){
-    return this.saldo;
+  Ingresar(dineroIN){
+    this.saldo = this.saldo + dineroIN;
   }
 
-  set newDeposit(deposito){
-    this.saldo = deposito ;
+  Extraer(dineroOUT){
+    if ( this.saldo < dineroOUT ){
+      alert('Operacion no valida')
+      return;
+    }
+    this.saldo -= dineroOUT;
   }
 
-
-
+  Informar(mensaje){
+    // document.write('Saldo actual de la cuenta: ' + this.saldo)
+    alert(mensaje + this.saldo)
+  }
 }
-alert('Bienvenido')
-let usuario = new cuenta()
-usuario.informar();
+
+
+
+alert('Bienvenido');
+let cuenta = new Cuentas('Alex', 0);
+let salir = false;
+
+cuenta.Informar('Saldo actual de la cuenta: ');
 do {
-  let opcion = parseInt(prompt('Eliga una opcion: 0 (Deposito) - 1 (Extraccion) - 2 (Info Saldo)'));
-  if(!isNaN(opcion) && opcion !=null){
-    if( opcion >= 0 && opcion <= 2){
-      switch(opcion){
-        case 0:
-          usuario.ingresar();
-          usuario.newDeposit = parseInt(usuario.ingresar,usuario.newDeposit );
-          usuario.informar();
+  let opcion = parseInt(prompt('Eliga una opcion: 0 (Deposito) - 1 (Extraccion) - 2 (Info Saldo) - 3 (Salir)'));
+  // if(!isNaN(opcion) && opcion !=null){
+  //   if( opcion >= 0 && opcion <= 2){
+  switch(opcion){
+    case 0:
+      cuenta.Ingresar(parseInt(prompt('Coloque el monto a ingresar ')));
+      cuenta.Informar('Saldo actualizado: ');
+      break;
+    
+    case 1:
+      cuenta.Extraer(parseInt(prompt('Coloque el monto a retirar'))); 
+      cuenta.Informar('Saldo actualizado: ');
+      break;
 
+    case 2:
+      cuenta.Informar('Saldo actual de la cuenta: ');
+      break;
 
-      }
+    case 3:
+      salir = true;
+      break;
 
-    }else {
-  alert('Ingrese una opcion valida')
-   }
+    default:
+      alert('Ingrese una opcion valida')
+      break;
+  }
 
-  }else {
-  alert('Ingrese una opcion valida')
-   }
+  //   }else {
+  // alert('Ingrese una opcion valida')
+  //  }
+
+  // }else {
+  // alert('Ingrese una opcion valida')
+  //  }
 
   
-} while (condition);
+} while (!salir);
 
 
