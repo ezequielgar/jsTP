@@ -26,7 +26,7 @@ class Cuentas  {
   }
 
   Informar(mensaje){
-    // document.write('Saldo actual de la cuenta: ' + this.saldo)
+    
     alert(mensaje + this.saldo)
   }
 }
@@ -44,6 +44,7 @@ do {
   switch(opcion){
     case 0:
       cuenta.Ingresar(parseInt(prompt('Coloque el monto a ingresar ')));
+      console.log(this.saldo);
       cuenta.Informar('Saldo actualizado: ');
       break;
     
