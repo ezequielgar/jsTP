@@ -2,39 +2,45 @@
 // 3-Escribe una clase que permita crear distintos objetos “rectángulos”, con las propiedades de alto y ancho, mas los métodos necesarios para modificar y mostrar sus propiedades, calcular el perímetro y el área
 
 class Rectangulos {
-  constructor(alto, ancho) {
+  constructor() {
+    this.altura;
+    this.base;
+  }
+
+  setAltura(alto) {
     this.altura = alto;
-    this.base = ancho;
   }
 
-
-
-  calculaSuperficie(superf){
-      superf = this.base * this.altura ;
-      console.log('La superficie es : ' + superf);
-      
+  getAltura() {
+    return this.altura;
   }
 
-  calcularPerimetro(perimet){
-      perimet = this.base*2 + this.altura*2 ;
-      console.log('El perimetro es : ' + perimet);
+  setBase(base) {
+    this.base = base;
   }
 
-  
+  getBase() {
+    return this.base;
+  }
 
+  calculaSuperficie() {
+    let superf = this.base * this.altura;
+    return superf;
+  }
+
+  calcularPerimetro() {
+    let perimet = this.base * 2 + this.altura * 2;
+    return perimet;
+  }
 }
-alert('Bienvenido');
+alert("Bienvenido");
 let newRectangulo = new Rectangulos();
 
-this.altura = parseInt( prompt('Ingrese la altura'));
-console.log(this.altura);
-this.base = parseInt(prompt('Ingresa la  base'))
-console.log(this.base);
 
-newRectangulo.calculaSuperficie();
-newRectangulo.calcularPerimetro();
+newRectangulo.setAltura(parseInt(prompt("Ingrese la altura")));
+newRectangulo.setBase(parseInt(prompt("Ingrese la base")));
 
-
-// falta terminar de resolver como ingresar base y altura para tomar estos datos y volcarlos en los metodos
+alert("la superficier es :" + newRectangulo.calculaSuperficie());
+alert("el perimetro es :" + newRectangulo.calcularPerimetro());
 
 
