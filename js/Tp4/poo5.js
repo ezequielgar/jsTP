@@ -90,9 +90,12 @@ usuario.setEdadIn(parseInt(prompt('Ingrese la edad')));
 usuario.setDniIn(parseInt(prompt('Ingrese el DNI')));
 usuario.setSexoIn(prompt('Ingrese el Sexo (H o M)'));
 usuario.setPesoIn(parseInt(prompt('Ingrese el peso')));
-usuario.setFechaNacIn(prompt('Ingrese la fecha de nacimiento'));
-usuario.setAlturaIn(parseInt(prompt('Ingrese la altura')));
+usuario.setFechaNacIn(prompt('Ingrese el año de nacimiento'));
+usuario.setAlturaIn(prompt('Ingrese la altura'));
 
+
+usuario.mostrarGeneracion();
+usuario.esMayorDeEdad();
 usuario.mostrarDatos();
 
 
