@@ -1,32 +1,38 @@
 class Persona {
-  constructor(nombre, edad, dni, sexo, peso, alt, fNac) {
-    this.parNombre = nombre;
-    this.parEdad = edad;
-    this.parDni = dni;
-    this.parSexo = sexo;
-    this.parPeso = peso;
-    this.parAlt = alt;
-    this.parFechaNac = fNac;
+  constructor() {
+    this.parNombre;
+    this.parEdad;
+    this.parDni;
+    this.parSexo;
+    this.parPeso;
+    this.parAlt;
+    this.parFechaNac;
   }
-  set NombreIn(nombre){
+
+  setParNombre(nombre){
       this.parNombre = nombre;
   } 
-  set EdadIn(edad){
+
+  getParnombre(){
+    return this.parNombre
+  }
+
+  setEdadIn(edad){
       this.parEdad = edad;
   }
-  set DniIn(dni){
+  setDniIn(dni){
       this.parDni = dni;
   }
-  set SexoIn(sexo){
+  setSexoIn(sexo){
       this.parSexo = sexo;
   }
-  set PesoIn(peso){
+  setPesoIn(peso){
       this.parPeso = peso;
   }
-  set AlturaIn(altura){
+  setAlturaIn(altura){
       this.parAlt = altura;
   }
-  set FechaNacIn(fechaNac){
+  setFechaNacIn(fechaNac){
       this.parFechaNac = fechaNac ;
   }
 
@@ -78,10 +84,16 @@ class Persona {
 alert('Bienvenido')
 let usuario = new Persona();
 
-usuario.NombreIn(prompt('Ingrese el nombre de usuario'));
-usuario.EdadIn(parseInt(prompt('Ingrese la edad')));
-usuario.DniIn(parseInt(prompt('Ingrese el DNI')));
-usuario.SexoIn(prompt('Ingrese el Sexo (H o M)'));
+usuario.setParNombre(prompt('Ingrese el nombre del usuario'));
+console.log(usuario.getParnombre());
+usuario.setEdadIn(parseInt(prompt('Ingrese la edad')));
+usuario.setDniIn(parseInt(prompt('Ingrese el DNI')));
+usuario.setSexoIn(prompt('Ingrese el Sexo (H o M)'));
+usuario.setPesoIn(parseInt(prompt('Ingrese el peso')));
+usuario.setFechaNacIn(prompt('Ingrese la fecha de nacimiento'));
+usuario.setAlturaIn(parseInt(prompt('Ingrese la altura')));
+
+usuario.mostrarDatos();
 
 
 
